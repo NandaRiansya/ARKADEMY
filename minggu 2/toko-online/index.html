@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=", initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TOKO ONLINE IKAN CUPANG</title>
+    <style>
+        #item-list{
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 10px;
+            border: 2px solid black;
+            background-color: red;
+        }
+        .item{
+            flex: 2;
+            background-color: aqua;
+            margin: 25px;
+            border-radius: 20px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        .item:hover{
+            background-color: yellow;
+        }
+        .item .gambar img {
+            width: 170px;
+            height: 130px;
+            margin: 5px;
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+        h1{
+            background-color: red;
+            border: 1px solid black;
+            border-radius: 20px;
+            animation-name: gantiwarna;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes gantiwarna{
+            0%   {background-color:red; left:0px; top:0px;}
+            25%  {background-color: yellow; left:200px; top:0px;}
+            50%  {background-color:green; left:200px; top:200px;}
+            75%  {background-color:blue; left:0px; top:200px;}
+            100% {background-color:red; left:0px; top:0px;}
+        }
+    </style>
+</head>
+<body>
+    <center><H1>IKAN CUPANG NANDAYOOO </DIV></CENTER>
+    <div id="item-list"></div>
+    <script>
+        let item=[
+    {
+        "jenis":"halfmoon",
+        "gambar":"assets/img/1.jpg",
+        "grade": "s+",
+        "warna":"blue",
+        "harga":"50.000"
+    },
+    {
+        "jenis":"halfmoon",
+        "gambar":"assets/img/8.jpg",
+        "grade": "s+",
+        "warna":"black and white",
+        "harga":"100.000"
+    },
+    {
+        "jenis":"halfmoon",
+        "gambar":"assets/img/3.jpg",
+        "grade": "s+",
+        "warna":"red",
+        "harga":"70.000"
+    },
+    {
+        "jenis":"halfmoon",
+        "gambar":"assets/img/4.jpg",
+        "grade": "s+",
+        "warna":"white",
+        "harga":"75.000"
+    },
+    {
+        "jenis":"crowntail",
+        "gambar":"assets/img/5.jpg",
+        "grade": "s+",
+        "warna":"orange",
+        "harga":"75.000"
+    },
+    {
+        "jenis":"halfmoon",
+        "gambar":"assets/img/6.jpg",
+        "grade": "s+",
+        "warna":"yellow",
+        "harga":"75.000"
+    },
+    {
+        "jenis":"halfmoon",
+        "gambar":"assets/img/7.jpg",
+        "grade": "s+",
+        "warna":"green",
+        "harga":"75.000"
+    },
+    {
+        "jenis":"plakat nemo",
+        "gambar":"assets/img/2.jpg",
+        "grade": "s+",
+        "warna":"NEM0",
+        "harga":"150.000"
+    },
+    {
+        "jenis":"black samurai",
+        "gambar":"assets/img/9.jpg",
+        "grade": "s+",
+        "warna":"black",
+        "harga":"50.000"
+    },
+    {
+        "jenis":"panda",
+        "gambar":"assets/img/10.jpg",
+        "grade": "s+",
+        "warna":"blue, white,and black",
+        "harga":"150.000"
+    },
+    {
+        "jenis":"galaxy",
+        "gambar":"assets/img/11.jpg",
+        "grade": "s+",
+        "warna":"galaxy",
+        "harga":"50.000"
+    },
+    {
+        "jenis":"red dragon",
+        "gambar":"assets/img/12.jpg",
+        "grade": "s+",
+        "warna":"white and red",
+        "harga":"100.000"
+    },
+    {
+        "jenis":"blue rim",
+        "gambar":"assets/img/13.jpg",
+        "grade": "s+",
+        "warna":"blue",
+        "harga":"150.000"
+    },
+    {
+        "jenis":"koi marble",
+        "gambar":"assets/img/14.jpg",
+        "grade": "s+",
+        "warna":"koi",
+        "harga":"50.000"
+    },
+    {
+        "jenis":"heelboy",
+        "gambar":"assets/img/15.jpg",
+        "grade": "s+",
+        "warna":"red",
+        "harga":"150.000"
+    },
+    {
+        "jenis":"leopard nemo",
+        "gambar":"assets/img/16.jpg",
+        "grade": "s+",
+        "warna":"orange and black",
+        "harga":"150.000"
+    },
+    {
+        "jenis":"crowntal",
+        "gambar":"assets/img/17.jpg",
+        "grade": "s+",
+        "warna":"red",
+        "harga":"50.000"
+    },
+    {
+        "jenis":"crowntail",
+        "gambar":"assets/img/18.jpg",
+        "grade": "s+",
+        "warna":"white",
+        "harga":"50.000"
+    },
+    {
+        "jenis":"crowntail fancy",
+        "gambar":"assets/img/19.jpg",
+        "grade": "s+",
+        "warna":"fancy",
+        "harga":"50.000"
+    },
+    {
+        "jenis":"crowntail",
+        "gambar":"assets/img/20.jpg",
+        "grade": "s+",
+        "warna":"black",
+        "harga":"50.000"
+    },
+];
+for(x in item){
+    let jenisitem=item[x].jenis
+    let gambaritem=item[x].gambar
+    let gradeitem=item[x].grade
+    let warnaitem=item[x].warna
+    let hargaitem=item[x].harga
+
+    document.getElementById('item-list').innerHTML+="\
+    <div class='item'>\
+        <div class='gambar'><img src ='"+gambaritem+"' alt=''/></div>\
+        <div class='jenis'>"+jenisitem+"</div>\
+        <div class='grade'>"+gradeitem+"</div>\
+        <div class='warna'>"+warnaitem+"</div>\
+        <div class='harga'>"+hargaitem+"</div>\
+    </div>\
+    ";
+    if(((x+1)/5)===0){
+        document.getElementsByid('item-list').innerHTML+="\
+        <div class='pemisah'></div>\
+        ";
+
+    }
+}
+    </script>
+    
+</body>
+</html>
