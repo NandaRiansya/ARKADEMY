@@ -28,7 +28,7 @@
             width: 170px;
             height: 130px;
             margin: 5px;
-            border: 1px solid black;
+            border: 3px solid black;
             border-radius: 20px;
         }
         h1{
@@ -36,7 +36,7 @@
             border: 1px solid black;
             border-radius: 20px;
             animation-name: gantiwarna;
-            animation-duration: 1s;
+            animation-duration: 20s;
             animation-iteration-count: infinite;
         }
         @keyframes gantiwarna{
@@ -45,6 +45,18 @@
             50%  {background-color:green; left:200px; top:200px;}
             75%  {background-color:blue; left:0px; top:200px;}
             100% {background-color:red; left:0px; top:0px;}
+        }
+        #item-list div .jenis::before{
+            content: "jenis: "
+        }
+        #item-list div .grade::before{
+            content: "grade: "
+        }
+        #item-list div .warna::before{
+            content: "warna: "
+        }
+        #item-list div .harga::before{
+            content: "harga: "
         }
     </style>
 </head>
@@ -166,7 +178,7 @@
         "harga":"150.000"
     },
     {
-        "jenis":"crowntal",
+        "jenis":"crowntail",
         "gambar":"assets/img/17.jpg",
         "grade": "s+",
         "warna":"red",

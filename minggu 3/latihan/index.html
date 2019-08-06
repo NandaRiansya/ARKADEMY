@@ -1,0 +1,71 @@
+<html>
+<head>
+<title> Biodata nanda riansyah</title>
+</head>
+<style>
+    #nama::before{
+        content: "Nama: "
+    }
+    #kelas::before{
+        content: "Kelas: "
+    }
+    #tanggallahir::before{
+        content: "tanggallahir: "
+    }
+    #alamat::before{
+        content: "alamat: "
+    }
+    #citacita::before{
+        content: "citacita: "
+    }
+    #agama::before{
+        content: "agama: "
+    }
+    #hobbi::before{
+        content: "hobbi: "
+    }
+</style>
+<body>
+<form action="#" style="width: 700px"class="posisi";>
+<fieldset class="h"/>
+<table style="width: 600px;">
+<body style="background-color:red"></body>
+
+<img src="nanda.jpg" alt="" width="200px;">
+<div id="nama"></div>
+<div id="kelas"></div>
+<div id="tanggallahir"></div>
+<div id="alamat"></div>
+<div id="citacita"></div>
+<div id="agama"></div>
+<div id="hobbi"></div>
+<script>
+    let data = {
+        nama:"Nanda Ri4nsyah",
+        kelas:"XI-RPL 1",
+        tanggallahir:"Jakarta, 29 Maret 2003",        
+        alamat:"Jl.petojo sabangan 3",        
+        citacita:"player football",        
+        agama:"islam",        
+        hobbi:"main bola",        
+
+    };
+
+    let nama = document.getElementById('nama');
+    let kelas = document.getElementById('kelas');
+    let tanggallahir = document.getElementById('tanggallahir');
+    let alamat = document.getElementById('alamat');
+    let citacita = document.getElementById('citacita')
+    let agama= document.getElementById('agama');
+    let hobbi= document.getElementById('hobbi');
+
+    nama.innerHTML = data.nama
+    kelas.innerHTML = data.kelas
+    tanggallahir.innerHTML = data.tanggallahir
+    alamat.innerHTML = data.alamat
+    citacita.innerHTML = data.citacita
+    agama.innerHTML = data.agama
+    hobbi.innerHTML = data.hobbi
+</script>
+</body>
+</html>
